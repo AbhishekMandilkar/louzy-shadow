@@ -15,12 +15,10 @@ import {
 } from "@nextui-org/react";
 import { Gear, Moon, SignOut, Sun } from "@phosphor-icons/react";
 import React, {Key} from "react";
-import { ThemeSwitch } from "./theme-switch";
 import { useTheme } from "next-themes";
 
 function UserInfo() {
-//   const { user,isLoading} = useKindeBrowserClient();
-  const {user, isLoading,} = useKindeBrowserClient();
+  const {user} = useKindeBrowserClient();
   console.log(user?.picture);
   const avatarName = user?.given_name?.charAt(0);
   const fullName = `${user?.given_name} ${user?.family_name}`;

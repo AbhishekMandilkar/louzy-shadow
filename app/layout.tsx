@@ -8,6 +8,8 @@ import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import LandingPage from "@/components/landing";
+import SideBar from "@/components/sider-bar/side-bar";
+import CommonLayout from "@/components/common/common-layout";
 
 export const metadata: Metadata = {
   title: {
@@ -49,7 +51,10 @@ export default async function RootLayout({
             {isLoggedIn ? (
               <>
                 <Navbar />
-                <main className="w-screen px-6 flex-grow">{children}</main>
+                <main className="w-screen flex h-full">
+                  <SideBar />
+                  <CommonLayout>{children}</CommonLayout>
+                </main>
               </>
             ) : (
               <LandingPage />
