@@ -43,7 +43,7 @@ function UserInfo() {
   return (
     <Popover placement="bottom" offset={10}>
       <PopoverTrigger>
-        <div className="flex">
+        <div className="flex cursor-pointer">
           <Avatar
             src={user?.picture || undefined}
             name={avatarName}
@@ -55,14 +55,14 @@ function UserInfo() {
         </div>
       </PopoverTrigger>
       <PopoverContent className="p-1 min-w-28">
-        <div className="w-full min-w-[200px] p-1 rounded-small">
+        <div className="w-full min-w-[300px] p-2 rounded-small">
           <div className="flex p-2">
             <User
               name={fullName}
               description={email}
               className="flex gap-1"
               avatarProps={{
-                size: "sm",
+                size: "lg",
                 src: user?.picture || undefined,
                 className: 'mr-2 text-lg'
               }}
