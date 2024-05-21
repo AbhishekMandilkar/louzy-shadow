@@ -48,7 +48,6 @@ function UserInfo() {
             src={user?.picture || undefined}
             name={avatarName}
             showFallback
-            isBordered
             className="text-lg"
             size="sm"
           />
@@ -62,9 +61,11 @@ function UserInfo() {
               description={email}
               className="flex gap-1"
               avatarProps={{
-                size: "lg",
+                size: "md",
                 src: user?.picture || undefined,
-                className: 'mr-2 text-lg'
+                showFallback: true,
+                className: 'mr-2 text-2xl',
+                name: avatarName,
               }}
             />
           </div>

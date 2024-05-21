@@ -20,6 +20,7 @@ import clsx from "clsx";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { SearchIcon } from "@/components/icons";
 import UserInfo from "./user-info";
+import Branding from "./common/branding";
 
 export const Navbar = () => {
   const searchInput = (
@@ -45,14 +46,6 @@ export const Navbar = () => {
 
   return (
     <NextUINavbar isBordered maxWidth="full" position="sticky">
-      <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-        <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
-            <p className="font-bold text-inherit font-mono text-xl">moon-light</p>
-          </NextLink>
-        </NavbarBrand>
-      </NavbarContent>
-
       <NavbarContent
         className="hidden sm:flex basis-1/5 sm:basis-full"
         justify="end"

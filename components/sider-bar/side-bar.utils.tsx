@@ -1,4 +1,4 @@
-import {File, Files, House, Icon, Money, User} from "@phosphor-icons/react";
+import {CurrencyInr, File, Files, House, Icon} from "@phosphor-icons/react";
 
   
   export interface ITabs {
@@ -17,7 +17,7 @@ import {File, Files, House, Icon, Money, User} from "@phosphor-icons/react";
     tabList.push({
       path: "/pricing",
       name: "Price",
-      icon: Money
+      icon: CurrencyInr
     });
     tabList.push({
       path: "/blog",
