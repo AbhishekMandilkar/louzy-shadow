@@ -48,7 +48,7 @@ export default async function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-row h-screen w-screen">
+          <>
             {isLoggedIn ? (
               <>
                 <SideBar />
@@ -60,7 +60,7 @@ export default async function RootLayout({
             ) : (
               <LandingPage />
             )}
-          </div>
+          </>
         </Providers>
       </body>
     </html>
