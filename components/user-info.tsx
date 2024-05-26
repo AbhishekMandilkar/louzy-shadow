@@ -13,9 +13,9 @@ import {
   PopoverTrigger,
   User,
 } from "@nextui-org/react";
-import { Gear, Moon, SignOut, Sun } from "@phosphor-icons/react";
 import React, {Key} from "react";
 import { useTheme } from "next-themes";
+import {LogOutIcon, MoonIcon, SettingsIcon, SunIcon} from "lucide-react";
 
 function UserInfo() {
   const {user} = useKindeBrowserClient();
@@ -77,17 +77,17 @@ function UserInfo() {
           >
             <ListboxItem
               startContent={
-                theme == "light" ? <Moon size={24} /> : <Sun size={24} />
+                theme == "light" ? <MoonIcon size={24} /> : <SunIcon size={24} />
               }
               key={"theme-switch"}
             >
               {theme == "light" ? "Dark mode" : "Light mode"}
             </ListboxItem>
-            <ListboxItem startContent={<Gear size={24} />} key={"settings"}>
+            <ListboxItem startContent={<SettingsIcon size={24} />} key={"settings"}>
               Settings
             </ListboxItem>
             <ListboxItem
-              startContent={<SignOut size={24} />}
+              startContent={<LogOutIcon size={24} />}
               key="logout"
               className="text-danger"
               color="danger"

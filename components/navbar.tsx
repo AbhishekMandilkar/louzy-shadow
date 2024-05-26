@@ -22,7 +22,7 @@ import { SearchIcon } from "@/components/icons";
 import UserInfo from "./user-info";
 import Branding from "./common/branding";
 
-export const Navbar = () => {
+export const AppNavbar = () => {
   const searchInput = (
     <Input
       aria-label="Search"

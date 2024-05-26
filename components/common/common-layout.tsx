@@ -1,15 +1,7 @@
-import React from 'react'
+import React from "react";
 
-function CommonLayout(
-    { children }: { children: React.ReactNode }
-) {
-  return (
-    <section className="flex flex-1 gap-4 py-8 px-4 md:py-1">
-      <div className="inline-block max-w-lg text-center justify-center">
-        {children}
-      </div>
-    </section>
-  );
+function CommonLayout({ children }: { children: React.ReactNode }) {
+  return <section className="flex flex-1 h-full">{children}</section>;
 }
 
-export default CommonLayout
+export default CommonLayout;

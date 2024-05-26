@@ -1,9 +1,9 @@
-import {CurrencyInr, File, Files, House, Icon} from "@phosphor-icons/react";
+import {Currency, File, FileLock, FileTextIcon, Home, LucideIcon} from "lucide-react";
 
   
   export interface ITabs {
     path: string;
-    icon: Icon;
+    icon: LucideIcon;
     name: string;
   }
   
@@ -11,24 +11,25 @@ import {CurrencyInr, File, Files, House, Icon} from "@phosphor-icons/react";
     const tabList: ITabs[] = [];
     tabList.push({
       path: "/",
-      name: "Dashboard",
-      icon: House
+      name: "Home",
+      icon: Home
     });
+
     tabList.push({
-      path: "/pricing",
-      name: "Price",
-      icon: CurrencyInr
+      path: "/forms",
+      name: "Forms",
+      icon: FileTextIcon
     });
-    tabList.push({
-      path: "/blog",
-      name: "Blog",
-      icon: File
-    });
-    tabList.push({
-      path: "/docs",
-      name: "Docs",
-      icon: Files
-    });
+    // tabList.push({
+    //   path: "/blog",
+    //   name: "Blog",
+    //   icon: File
+    // });
+    // tabList.push({
+    //   path: "/docs",
+    //   name: "Docs",
+    //   icon: FileLock
+    // });
     return tabList;
   };
   
